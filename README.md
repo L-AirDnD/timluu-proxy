@@ -38,3 +38,4 @@ npm install
 ```
 
 # timluu-service
+# timluu-proxy
