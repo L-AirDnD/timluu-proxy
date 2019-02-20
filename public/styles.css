@@ -1,0 +1,12 @@
+#photos {
+  display: block;
+}
+
+#reviews {
+  display: inline-block;
+}
+
+#app {
+  display: inline-block;
+  vertical-align: top;
+}
