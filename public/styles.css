@@ -2,11 +2,49 @@
   display: block;
 }
 
-#reviews {
-  display: inline-block;
+#offering-info {
+  display: flex;
 }
 
-#app {
+#left-col {
+  padding-top: 20px;
+  width: 50%;
+  order: 1;
+  flex-direction: column;
+  flex-grow: 2;
+  object-fit: contain;
+}
+
+#right-col {
+  padding-top: 20px;
+  order: 2;
+  flex-grow: 1;
+}
+
+#description,
+#amenities,
+#calendar,
+#host-bio,
+#neighborhood,
+#map,
+#policies,
+#similar,
+#other-things {
+  width: 100%;
+  object-fit: contain;
+}
+
+#similar,
+#other-things {
+  width: 100%
+}
+
+#reviews {
+  float: right;
+  padding-right: 75px;
+}
+
+#reservations {
   display: inline-block;
   vertical-align: top;
 }

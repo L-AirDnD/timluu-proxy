@@ -6,11 +6,46 @@
   <body>
     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+
     <div id="photos"></div>
-    <div id="review"></div>
-    <div id="app"></div>
-    <script src="http://localhost:3001"></script>
+    <div id="offering-info">
+      <div id="left-col">
+        <img id="description" src="./screenshots/description.png"/>
+        <img id="amenities" src="./screenshots/amenities.png"/>
+        <img id="calendar" src="./screenshots/calendar.png"/>
+        <div id="reviews"></div>
+        <img id="host-bio" src="./screenshots/host-bio.png"/>
+        <img id="neighborhood" src="./screenshots/neighborhood.png"/>
+        <img id="map" src="./screenshots/map.png"/>
+        <img id="policies" src="./screenshots/policies.png"/>
+      </div>
+      <div id="right-col">
+        <div id="reservations"></div>
+      </div>
+    </div>
+    <img id="similar" src="./screenshots/similar.png"/>
+    <img id="other-things" src="./screenshots/other-things.png"/>
+    
+    <script src="http://localhost:3001/bundle.js"></script>
     <script src="http://localhost:3002/dist/bundle.js"></script>
     <script src="http://localhost:3003/bundle.js"></script>
+    <script>
+      ReactDOM.render(
+        React.createElement(Photos), 
+        document.getElementById('photos')
+      );
+      ReactDOM.render(
+        React.createElement(Review), 
+        document.getElementById('reviews')
+      );
+      ReactDOM.render(
+        React.createElement(Reservation, {
+          offeringId: 4,
+          guestId: 2
+        }), 
+        document.getElementById('reservations')
+      );
+    </script>
   </body>
 </html>
