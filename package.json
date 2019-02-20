@@ -1,17 +1,29 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "proxy_server",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon server/index.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L-AirDnD/timluu-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/L-AirDnD/timluu-proxy/issues"
+  },
+  "homepage": "https://github.com/L-AirDnD/timluu-proxy#readme"
 }
