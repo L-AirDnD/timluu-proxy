@@ -11,25 +11,63 @@
     <div id="photos"></div>
     <div id="offering-info">
       <div id="left-col">
-        <img id="description" src="./screenshots/description.png"/>
-        <img id="amenities" src="./screenshots/amenities.png"/>
-        <img id="calendar" src="./screenshots/calendar.png"/>
+        <picture>
+          <source srcset="./screenshots/description.webp" type="image/webp">
+          <source srcset="./screenshots/description.png" type="image/png">
+          <img id="description" src="./screenshots/description.png"/>
+        </picture>
+        <picture>
+          <source srcset="./screenshots/amenities.webp" type="image/webp">
+          <source srcset="./screenshots/amenities.png" type="image/png">
+          <img id="amenities" src="./screenshots/amenities.png"/>
+        </picture>
+        <picture>
+          <source srcset="./screenshots/calendar.webp" type="image/webp">
+          <source srcset="./screenshots/calendar.png" type="image/png">
+          <img id="calendar" src="./screenshots/calendar.png"/>
+        </picture>
+        
         <div id="reviews"></div>
-        <img id="host-bio" src="./screenshots/host-bio.png"/>
-        <img id="neighborhood" src="./screenshots/neighborhood.png"/>
-        <img id="map" src="./screenshots/map.png"/>
-        <img id="policies" src="./screenshots/policies.png"/>
+        
+        <picture>
+          <source srcset="./screenshots/host-bio.webp" type="image/webp">
+          <source srcset="./screenshots/host-bio.png" type="image/png">
+          <img id="host-bio" src="./screenshots/host-bio.png"/>
+        </picture>
+        <picture>
+          <source srcset="./screenshots/neighborhood.webp" type="image/webp">
+          <source srcset="./screenshots/neighborhood.png" type="image/png">
+          <img id="neighborhood" src="./screenshots/neighborhood.png"/>
+        </picture>
+        <picture>
+          <source srcset="./screenshots/map.webp" type="image/webp">
+          <source srcset="./screenshots/map.png" type="image/png">
+          <img id="map" src="./screenshots/map.png"/>
+        </picture>
+        <picture>
+          <source srcset="./screenshots/policies.webp" type="image/webp">
+          <source srcset="./screenshots/policies.png" type="image/png">
+          <img id="policies" src="./screenshots/policies.png"/>
+        </picture>
       </div>
       <div id="right-col">
         <div id="reservations"></div>
       </div>
     </div>
-    <img id="similar" src="./screenshots/similar.png"/>
-    <img id="other-things" src="./screenshots/other-things.png"/>
+    <picture>
+      <source srcset="./screenshots/similar.webp" type="image/webp">
+      <source srcset="./screenshots/similar.png" type="image/png">
+      <img id="similar" src="./screenshots/similar.png"/>
+    </picture>
+    <picture>
+      <source srcset="./screenshots/other-things.webp" type="image/webp">
+      <source srcset="./screenshots/other-things.png" type="image/png">
+      <img id="other-things" src="./screenshots/other-things.png"/>
+    </picture>
     
-    <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:3002/dist/bundle.js"></script>
-    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://testlairdnd-env.35knfxdsa6.us-east-1.elasticbeanstalk.com/bundle.js"></script>
+    <script src="http://lairdndreviews.us-east-1.elasticbeanstalk.com/dist/bundle.js"></script>
+    <script src="http://ec2-3-16-89-36.us-east-2.compute.amazonaws.com/bundle.js"></script>
     <script>
       ReactDOM.render(
         React.createElement(Photos), 
@@ -39,9 +77,16 @@
         React.createElement(Review), 
         document.getElementById('reviews')
       );
+
+      let offeringId = window.location.pathname.slice(1);
+      if (typeof parseInt(offeringId) !== 'number' || parseInt(offeringId) > 100) {
+        window.location.href = '/1';
+      }
+      if (offeringId === '') offeringId = 1;
+
       ReactDOM.render(
         React.createElement(Reservation, {
-          offeringId: 4,
+          offeringId,
           guestId: 2
         }), 
         document.getElementById('reservations')
