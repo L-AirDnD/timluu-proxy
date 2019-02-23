@@ -1,13 +1,12 @@
 # Project Name
 
-> Project description
+> L-AirDnD
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/L-AirDnD/timluu-service
+  - https://github.com/L-AirDnD/ecuyle-service
+  - https://github.com/L-AirDnD/Ceciil-service
 
 ## Table of Contents
 
@@ -17,7 +16,7 @@
 
 ## Usage
 
-> Some usage instructions
+> Open the command line and run the command "npm start", which will run the script "node server/index.js"
 
 ## Requirements
 
@@ -33,7 +32,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
 
