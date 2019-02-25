@@ -3,20 +3,21 @@
 }
 
 #offering-info {
+  width: 100vw;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 20px;
 }
 
 #left-col {
-  padding-top: 20px;
-  width: 50%;
-  order: 1;
+  width: 60%;
+  display: flex;
   flex-direction: column;
-  flex-grow: 2;
-  object-fit: contain;
+  align-items: center;
 }
 
 #right-col {
-  padding-top: 20px;
   order: 2;
   flex-grow: 1;
 }
@@ -31,7 +32,6 @@
 #similar,
 #other-things {
   width: 100%;
-  object-fit: contain;
 }
 
 #similar,
@@ -40,11 +40,9 @@
 }
 
 #reviews {
-  float: right;
-  padding-right: 75px;
+  margin-bottom: 20px;
 }
 
 #reservations {
   display: inline-block;
-  vertical-align: top;
 }
